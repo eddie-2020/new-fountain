@@ -48,8 +48,8 @@ const Home = ({ isDarkMode, toggleTheme }) => {
                   ₦{data.price}
                 </span>
                 <button
-                  className={`button button-sm lg:button-md bg-gray-800 text-white p-2 mt-4 rounded-md text-[15px] ${
-                    isDarkMode ? "bg-white text-black font-bold" : ""
+                  className={`button button-sm lg:button-md bg-gray-800 p-2 mt-4 rounded-md text-[12px] lg:text-[14px] ${
+                    isDarkMode ? "bg-white text-gray-800 font-semibold" : "text-white font-normal"
                   } flex justify-center w-full`}
                 >
                   See More
