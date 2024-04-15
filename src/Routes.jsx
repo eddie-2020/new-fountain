@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -23,7 +23,12 @@ const AppRoutes = () => {
           path="/"
           element={<Home isDarkMode={isDarkMode} toggleTheme={toggleTheme} />}
         />
-        <Route path="/services" element={<Services />} />
+        <Route
+          path="/services"
+          element={
+            <Services isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+          }
+        />
         <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
       <Footer isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
