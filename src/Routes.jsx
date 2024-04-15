@@ -7,6 +7,9 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Services from "./components/Services";
 import ContactUs from "./components/Contact";
+import Details from "./components/Details";
+
+import { new_fountain_db } from "./data";
 
 const AppRoutes = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -14,6 +17,7 @@ const AppRoutes = () => {
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
   };
+
   return (
     <BrowserRouter>
       <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
@@ -30,6 +34,10 @@ const AppRoutes = () => {
           }
         />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route
+          path="/room/details/:id"
+          element={<Details data={new_fountain_db} />}
+        />
       </Routes>
       <Footer isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
     </BrowserRouter>

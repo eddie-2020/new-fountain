@@ -5,8 +5,8 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi"; // Imported icon
 
 import Slide1 from "../images/slide1.jpg";
 import Slide2 from "../images/slide2.jpg";
-import Slide3 from "../images/slide3.jpg";
-import Slide4 from "../images/slide4.jpg";
+// import Slide3 from "../images/slide3.jpg";
+// import Slide4 from "../images/slide4.jpg";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -103,7 +103,11 @@ export default function AnimatedSlider() {
           animate="center"
           exit="exit"
         >
-          <img src={Slide1} alt="" className="w-full h-[90vh] object-cover " />
+          <img
+            src={Slide1}
+            alt=""
+            className="object-fit max-w-full max-h-[100vh] w-full h-full"
+          />
         </motion.div>
         <motion.div
           variants={variants}
@@ -111,23 +115,11 @@ export default function AnimatedSlider() {
           animate="center"
           exit="exit"
         >
-          <img src={Slide2} alt="" className="w-full h-[90vh] object-cover " />
-        </motion.div>
-        <motion.div
-          variants={variants}
-          initial="enter"
-          animate="center"
-          exit="exit"
-        >
-          <img src={Slide3} alt="" className="w-full h-[90vh] object-cover " />
-        </motion.div>
-        <motion.div
-          variants={variants}
-          initial="enter"
-          animate="center"
-          exit="exit"
-        >
-          <img src={Slide4} alt="" className="w-full h-[90vh] object-cover " />
+          <img
+            src={Slide2}
+            alt=""
+            className="object-fit max-w-full max-h-[100vh] w-full h-full"
+          />
         </motion.div>
       </Slider>
     </div>

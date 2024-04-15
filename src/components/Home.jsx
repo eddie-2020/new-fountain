@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 import AnimatedSlider from "./Sliders";
-import { new_fountain_db } from "../data";
+import { Link } from "react-router-dom";
 
+import { new_fountain_db } from "../data";
 import SkeletonLoader from "./Skeleton";
 
 const Home = ({ isDarkMode, toggleTheme }) => {
@@ -19,12 +20,11 @@ const Home = ({ isDarkMode, toggleTheme }) => {
   return (
     <div className="mb-[100px]">
       <div className="text-center mt-[70px]">
-        {/* Content of your container */}
-        <div className="h-[100vh]">
+        <div className="">
           <AnimatedSlider />
         </div>
         <div className="flex justify-center">
-          <div className="container">
+          <div className="container mt-[50px] lg:mt-[50px]">
             <h1 className="text-[25px] lg:text-[30px]">Our Luxury Rooms</h1>
             <hr className="mt-3" />
             {isLoading ? (
@@ -34,7 +34,7 @@ const Home = ({ isDarkMode, toggleTheme }) => {
                 {new_fountain_db.map((data, index) => (
                   <div
                     key={index}
-                    className={`relative rounded-tr-md bg-white shadow-md hover:shadow-lg p-4 m-2 cursor-pointer ${
+                    className={`relative rounded-tr-md bg-white shadow-md hover:shadow-lg p-4 m-2 ${
                       isDarkMode ? "dark:bg-gray-800 dark:text-white" : ""
                     }`}
                   >
@@ -50,15 +50,17 @@ const Home = ({ isDarkMode, toggleTheme }) => {
                     <span className="absolute top-0 right-0 bg-green-500 text-white px-2 py-1 rounded-tr-md rounded-bl-md text-xs font-bold">
                       ₦{data.price}
                     </span>
-                    <button
-                      className={`button button-sm lg:button-md bg-gray-800 p-2 mt-4 rounded-md text-[12px] lg:text-[14px] ${
-                        isDarkMode
-                          ? "bg-white text-gray-800 font-semibold"
-                          : "text-white font-normal"
-                      } flex justify-center w-full`}
-                    >
-                      See More
-                    </button>
+                    <Link to={`/room/details/${data.id}`} className="transition-colors duration-300">
+                      <button
+                        className={`button button-sm cursor-pointer lg:button-md bg-gray-800 p-2 mt-4 rounded-md text-[12px] lg:text-[14px] ${
+                          isDarkMode
+                            ? "bg-white text-gray-800 font-semibold"
+                            : "text-white font-normal"
+                        } flex justify-center w-full`}
+                      >
+                        See More
+                      </button>
+                    </Link>
                   </div>
                 ))}
               </div>

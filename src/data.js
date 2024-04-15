@@ -8,6 +8,7 @@ import Room107 from './images/rooms/IMG_2382.jpg'
 
 export const new_fountain_db = [
   {
+    id: 1,
     image: Room101,
     name: "Room 101",
     room_details: "1 room, 2 toilets",
@@ -15,6 +16,7 @@ export const new_fountain_db = [
     price: 45000,
   },
   {
+    id: 2,
     image: Room102,
     name: "Room 102",
     room_details: "1 room, 1 toilet",
@@ -22,6 +24,7 @@ export const new_fountain_db = [
     price: 45000,
   },
   {
+    id: 3,
     image: Room103,
     name: "Room 103",
     room_details: "2 rooms, 3 toilets",
@@ -29,6 +32,7 @@ export const new_fountain_db = [
     price: 55000,
   },
   {
+    id: 4,
     image: Room104,
     name: "Room 104",
     room_details: "1 room, 2 toilets",
@@ -36,6 +40,7 @@ export const new_fountain_db = [
     price: 45000,
   },
   {
+    id: 5,
     image: Room105,
     name: "Room 105",
     room_details: "2 rooms, 3 toilets",
@@ -43,6 +48,7 @@ export const new_fountain_db = [
     price: 55000,
   },
   {
+    id: 6,
     image: Room106,
     name: "Room 106",
     room_details: "2 rooms, 2 toilets",
@@ -50,6 +56,7 @@ export const new_fountain_db = [
     price: 45000,
   },
   {
+    id: 7,
     image: Room104,
     name: "Room 201",
     room_details: "1 room, 1 toilet",
@@ -57,6 +64,7 @@ export const new_fountain_db = [
     price: 45000,
   },
   {
+    id: 8,
     image: Room105,
     name: "Room 202",
     room_details: "2 rooms, 2 toilets",
@@ -64,6 +72,7 @@ export const new_fountain_db = [
     price: 55000,
   },
   {
+    id: 9,
     image: Room102,
     name: "Room 203",
     room_details: "2 rooms, 3 toilets",
@@ -71,6 +80,7 @@ export const new_fountain_db = [
     price: 45000,
   },
   {
+    id: 10,
     image: Room103,
     name: "Room 204",
     room_details: "1 room, 2 toilets",
@@ -78,6 +88,7 @@ export const new_fountain_db = [
     price: 45000,
   },
   {
+    id: 11,
     image: Room107,
     name: "Painthouse",
     room_details: "3 rooms, 3 toilets",
@@ -85,6 +96,7 @@ export const new_fountain_db = [
     price: 80000,
   },
   {
+    id: 12,
     image: Room103,
     name: "Room 301",
     room_details: "2 rooms, 3 toilets",
@@ -92,6 +104,7 @@ export const new_fountain_db = [
     price: 55000,
   },
   {
+    id: 13,
     image: Room106,
     name: "Room 302",
     room_details: "1 room, 2 toilets",
@@ -99,6 +112,7 @@ export const new_fountain_db = [
     price: 45000,
   },
   {
+    id: 14,
     image: Room101,
     name: "Room 303",
     room_details: "2 rooms, 3 toilets",
@@ -106,6 +120,7 @@ export const new_fountain_db = [
     price: 55000,
   },
   {
+    id: 15,
     image: Room104,
     name: "Room 304",
     room_details: "1 room, 2 toilets",
