@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
 import { FiSun, FiMoon } from "react-icons/fi";
 
-const Navbar = (props) => {
+const Navbar = ({ isDarkMode, toggleTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(null);
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -27,10 +26,6 @@ const Navbar = (props) => {
     if (isMenuOpen) {
       toggleMenu();
     }
-  };
-
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
   };
 
   return (
