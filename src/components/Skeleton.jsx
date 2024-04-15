@@ -2,8 +2,8 @@ import React from "react";
 
 const SkeletonLoader = () => {
   return (
-    <div className="grid grid-cols-3 gap-4 mt-3">
-      {[1, 2, 3, 4, 5, 6].map((index) => (
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-3">
+      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((index) => (
         <div
           key={index}
           className="bg-gray-200 animate-pulse shadow-md p-4 m-2"

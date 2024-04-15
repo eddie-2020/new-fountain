@@ -19,45 +19,52 @@ const Home = ({ isDarkMode, toggleTheme }) => {
   return (
     <div className="mb-[100px]">
       <div className="text-center mt-[70px]">
+        {/* Content of your container */}
         <div className="h-[100vh]">
           <AnimatedSlider />
         </div>
-        <h1 className="text-[25px] lg:text-[30px]">Our Luxury Rooms</h1>
-        <hr />
-        {isLoading ? (
-          <SkeletonLoader />
-        ) : (
-          <div className="grid grid-cols-3 gap-4 mt-3">
-            {new_fountain_db.map((data, index) => (
-              <div
-                key={index}
-                className={`relative rounded-tr-md bg-white shadow-md hover:shadow-lg p-4 m-2 cursor-pointer ${
-                  isDarkMode ? "dark:bg-gray-800 dark:text-white" : ""
-                }`}
-              >
-                <img
-                  src={data.image}
-                  alt=""
-                  className="max-w-full w-[100%] h-40 lg:h-60"
-                />
-                <h1 className="text-md lg:text-xl font-semibold mt-3">
-                  {data.name}
-                </h1>
-                <h3 className="text-gray-400">{data.room_details}</h3>
-                <span className="absolute top-0 right-0 bg-green-500 text-white px-2 py-1 rounded-tr-md rounded-bl-md text-xs font-bold">
-                  ₦{data.price}
-                </span>
-                <button
-                  className={`button button-sm lg:button-md bg-gray-800 p-2 mt-4 rounded-md text-[12px] lg:text-[14px] ${
-                    isDarkMode ? "bg-white text-gray-800 font-semibold" : "text-white font-normal"
-                  } flex justify-center w-full`}
-                >
-                  See More
-                </button>
+        <div className="flex justify-center">
+          <div className="container">
+            <h1 className="text-[25px] lg:text-[30px]">Our Luxury Rooms</h1>
+            <hr className="mt-3" />
+            {isLoading ? (
+              <SkeletonLoader />
+            ) : (
+              <div className="grid gap-4 mt-3 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+                {new_fountain_db.map((data, index) => (
+                  <div
+                    key={index}
+                    className={`relative rounded-tr-md bg-white shadow-md hover:shadow-lg p-4 m-2 cursor-pointer ${
+                      isDarkMode ? "dark:bg-gray-800 dark:text-white" : ""
+                    }`}
+                  >
+                    <img
+                      src={data.image}
+                      alt=""
+                      className="max-w-full w-full h-60 lg:h-60 object-cover"
+                    />
+                    <h1 className="text-md lg:text-xl font-semibold mt-3">
+                      {data.name}
+                    </h1>
+                    <h3 className="text-gray-400">{data.room_details}</h3>
+                    <span className="absolute top-0 right-0 bg-green-500 text-white px-2 py-1 rounded-tr-md rounded-bl-md text-xs font-bold">
+                      ₦{data.price}
+                    </span>
+                    <button
+                      className={`button button-sm lg:button-md bg-gray-800 p-2 mt-4 rounded-md text-[12px] lg:text-[14px] ${
+                        isDarkMode
+                          ? "bg-white text-gray-800 font-semibold"
+                          : "text-white font-normal"
+                      } flex justify-center w-full`}
+                    >
+                      See More
+                    </button>
+                  </div>
+                ))}
               </div>
-            ))}
+            )}
           </div>
-        )}
+        </div>
       </div>
     </div>
   );
