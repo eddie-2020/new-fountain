@@ -166,19 +166,6 @@ const Home = ({ isDarkMode, toggleTheme }) => {
                 className="text-green-500 hover:text-green-600"
               />
             </a>
-
-            <a
-              href="https://www.instagram.com/your_instagram_account"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="fixed bottom-20 right-10 text-green-500 hover:text-green-600"
-            >
-              <FontAwesomeIcon
-                icon={faInstagram}
-                size="2x"
-                className="text-green-500 hover:text-green-600"
-              />
-            </a>
           </div>
           <hr />
         </div>
