@@ -26,11 +26,11 @@ const Services = ({ isDarkMode, toggleTheme }) => {
   }, []);
 
   return (
-    <div className="container mx-auto text-center mt-[80px] mb-[70px]">
+    <div className="container mx-auto text-center mt-[100px] mb-[70px]">
       <div className="">
         <div className="flex flex-col items-center justify-center">
           <h1 className="font-bold text-[20px] md:text-[30px]">Our Services</h1>
-          <div className="mt-4 w-10 h-1 rounded-lg bg-green-400"></div>
+          <div className="mt-2 w-10 h-1 rounded-lg bg-green-400"></div>
         </div>
         <div className="mt-6">
           {new_fountain_services.map((data, idx) => (
@@ -39,7 +39,7 @@ const Services = ({ isDarkMode, toggleTheme }) => {
             </div>
           ))}
         </div>
-        <div className="flex justify-center mt-[30px] m-5">
+        <div className="flex justify-center mt-[50px] m-5">
           <div className="container">
             {new_fountain_services.map((data, index) => (
               <div

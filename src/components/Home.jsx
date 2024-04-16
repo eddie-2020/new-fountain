@@ -158,7 +158,7 @@ const Home = ({ isDarkMode, toggleTheme }) => {
               href="https://api.whatsapp.com/send?phone=1234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="fixed bottom-8 right-10 text-green-500 hover:text-green-600"
+              className="fixed bottom-12 right-10 text-green-500 hover:text-green-600"
             >
               <FontAwesomeIcon
                 icon={faWhatsapp}
@@ -171,7 +171,7 @@ const Home = ({ isDarkMode, toggleTheme }) => {
               href="https://www.instagram.com/your_instagram_account"
               target="_blank"
               rel="noopener noreferrer"
-              className="fixed bottom-16 right-10 text-green-500 hover:text-green-600"
+              className="fixed bottom-20 right-10 text-green-500 hover:text-green-600"
             >
               <FontAwesomeIcon
                 icon={faInstagram}

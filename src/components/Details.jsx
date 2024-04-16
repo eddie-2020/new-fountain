@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { new_fountain_db } from "../data";
+import { new_fountain_db, new_fountain_services } from "../data";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const Details = ({ isDarkMode, toggleTheme }) => {

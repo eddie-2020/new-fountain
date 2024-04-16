@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
 import { FiSun, FiMoon } from "react-icons/fi";
 
-import logo from "../images/logo/new_fountain_logo.svg"
+import logo from "../images/logo/new_fountain_logo.svg";
 
 const Navbar = ({ isDarkMode, toggleTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,14 +33,22 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
     <nav
       className={`shadow-lg ${
         isDarkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
-      } fixed top-0 w-[100%] z-10`}
+      } fixed top-0 p-1 w-[100%] z-10`}
     >
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="flex items-center justify-center">
             <div className="flex-shrink-0">
               <Link to="/">
-                <span className="font-semibold"><img src={logo} alt="New Fountain" className={`w-full h-14 m-2  ${isDarkMode ? "bg-white my-2 rounded-md" : "bg-none"}`} /></span>
+                <span className="font-semibold">
+                  <img
+                    src={logo}
+                    alt="New Fountain"
+                    className={`w-28 h-16 mt-1 m-1 ${
+                      isDarkMode ? "bg-white rounded-sm" : "bg-none"
+                    }`}
+                  />
+                </span>
               </Link>
             </div>
             <div className="hidden md:block">
@@ -104,25 +112,26 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden">
+          <hr className="mt-2" />
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
               to="/"
-              className="block px-3 py-2 rounded-md text-base font-medium"
-              onClick={() => handleLinkClick(0)} // Close the menu when a link is clicked
+              className="block px-3 py-2 rounded-md text-sm font-medium"
+              onClick={() => handleLinkClick(0)}
             >
               Home
             </Link>
             <Link
               to="/services"
-              className="block px-3 py-2 rounded-md text-base font-medium"
-              onClick={() => handleLinkClick(1)} // Close the menu when a link is clicked
+              className="block px-3 py-2 rounded-md text-sm font-medium"
+              onClick={() => handleLinkClick(1)}
             >
               Services
             </Link>
             <Link
               to="/contact-us"
-              className="block px-3 py-2 rounded-md text-base font-medium"
-              onClick={() => handleLinkClick(2)} // Close the menu when a link is clicked
+              className="block px-3 py-2 rounded-md text-sm font-medium"
+              onClick={() => handleLinkClick(2)}
             >
               Contact Us
             </Link>
