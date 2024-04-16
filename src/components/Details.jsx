@@ -66,7 +66,7 @@ const Details = ({ isDarkMode, toggleTheme }) => {
               <span className="text-[10px]">Per Night</span>
             </span>
           </div>
-          <div className="ml-2 lg:ml-8">
+          <div className="m-2 lg:ml-8">
             <h1 className="text-2xl font-semibold">{room.name}</h1>
             <h3 className="text-md lg:text-lg text-gray-600">
               {room.room_details}
