@@ -36,7 +36,7 @@ const AppRoutes = () => {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route
           path="/room/details/:id"
-          element={<Details data={new_fountain_db} />}
+          element={<Details isDarkMode={isDarkMode} toggleTheme={toggleTheme} data={new_fountain_db} />}
         />
       </Routes>
       <Footer isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
