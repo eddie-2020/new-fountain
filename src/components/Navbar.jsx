@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
 import { FiSun, FiMoon } from "react-icons/fi";
 
+import logo from "../images/logo/new_fountain_logo.svg"
+
 const Navbar = ({ isDarkMode, toggleTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(null);
@@ -22,7 +24,6 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
       }
     }
 
-    // Close the menu if it's open
     if (isMenuOpen) {
       toggleMenu();
     }
@@ -39,7 +40,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
           <div className="flex items-center justify-center">
             <div className="flex-shrink-0">
               <Link to="/">
-                <span className="font-semibold">New Fountain</span>
+                <span className="font-semibold"><img src={logo} alt="New Fountain" className={`w-full h-14 m-2  ${isDarkMode ? "bg-white my-2 rounded-md" : "bg-none"}`} /></span>
               </Link>
             </div>
             <div className="hidden md:block">
