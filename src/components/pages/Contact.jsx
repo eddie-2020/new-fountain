@@ -1,11 +1,8 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
 import { MdSend } from "react-icons/md";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
-
 import WhatsApp from "./WhatsApp";
-
 import "../styles/HomeStyle.css";
 
 const ContactUs = () => {
@@ -17,10 +14,35 @@ const ContactUs = () => {
   const [messageValid, setMessageValid] = useState(true);
   const [alert, setAlert] = useState(null);
 
+  useEffect(() => {
+    // Check network connection on component mount
+    handleNetworkChange();
+    // Event listener for network status changes
+    window.addEventListener("online", handleNetworkChange);
+    window.addEventListener("offline", handleNetworkChange);
+
+    return () => {
+      // Cleanup event listeners
+      window.removeEventListener("online", handleNetworkChange);
+      window.removeEventListener("offline", handleNetworkChange);
+    };
+  }, []);
+
+  const handleNetworkChange = () => {
+    if (!navigator.onLine) {
+      setAlert({ type: "error", message: "Network connection is offline." });
+      setTimeout(() => {
+        setAlert(null);
+      }, 5000);
+    } else {
+      setAlert(null);
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Check network connection
+    // Check network connection before form submission
     if (!window.navigator.onLine) {
       setAlert({ type: "error", message: "Network connection is offline." });
       setTimeout(() => {
@@ -82,27 +104,23 @@ const ContactUs = () => {
         })
         .catch((error) => {
           console.error("Error sending email:", error);
-          setAlert({
-            type: "error",
-            message: "Error sending email.",
-          });
+          setAlert({ type: "error", message: "Error sending email." });
           setTimeout(() => {
             setAlert(null);
           }, 5000);
         });
     }
   };
+
   return (
-    <div className="container mx-auto text-center mt-[100px] mb-16">
+    <div className="container mx-auto text-center mt-[100px] mb-[70px]">
       <div className="flex flex-col items-center justify-center">
         <h1 className="font-bold text-2xl md:text-3xl">Contact New Fountain</h1>
         <div className="mt-2 w-10 h-1 rounded-lg bg-green-400"></div>
       </div>
       {alert && (
         <div
-          className={`fixed top-0 right-0 mt-4 mr-4 z-50 bg-${
-            alert.type === "success" ? "green" : "red"
-          }-500 text-white px-4 py-2 rounded-md`}
+          className={`fixed top-0 right-0 mt-4 mr-4 z-50 bg-${alert.type === "success" ? "green" : "red"}-500 text-white px-4 py-2 rounded-md`}
         >
           {alert.message}
         </div>
@@ -118,7 +136,7 @@ const ContactUs = () => {
           >
             <label
               htmlFor="name"
-              className="flex justify-start text-lg mb-2 font-semibold"
+              className="flex justify-start text-sm lg:text-lg mb-2 font-semibold"
             >
               Your Name
             </label>
@@ -126,7 +144,7 @@ const ContactUs = () => {
               type="text"
               id="name"
               name="name"
-              className={`w-full px-4 py-3 text-lg rounded-md border ${
+              className={`w-full px-4 py-3 text-sm lg:text-lg rounded-md border ${
                 nameValid
                   ? "border-gray-300 focus:border-green-500"
                   : "border-red-500"
@@ -139,7 +157,7 @@ const ContactUs = () => {
               }}
             />
             {!nameValid && (
-              <p className="text-red-500">Please enter your name.</p>
+              <p className="text-sm lg:text-md text-red-500">Please enter your name.</p>
             )}
           </motion.div>
           <motion.div
@@ -150,7 +168,7 @@ const ContactUs = () => {
           >
             <label
               htmlFor="email"
-              className="flex justify-start text-lg mb-2 font-semibold"
+              className="flex justify-start text-sm lg:text-lg mb-2 font-semibold"
             >
               Your Email
             </label>
@@ -158,7 +176,7 @@ const ContactUs = () => {
               type="email"
               id="email"
               name="email"
-              className={`w-full px-4 py-3 text-lg rounded-md border ${
+              className={`w-full px-4 py-3 text-sm lg:text-lg rounded-md border ${
                 emailValid
                   ? "border-gray-300 focus:border-green-500"
                   : "border-red-500"
@@ -171,7 +189,7 @@ const ContactUs = () => {
               }}
             />
             {!emailValid && (
-              <p className="text-red-500">
+              <p className="text-sm lg:text-md text-red-500">
                 Please enter a valid email address.
               </p>
             )}
@@ -184,7 +202,7 @@ const ContactUs = () => {
           >
             <label
               htmlFor="message"
-              className="flex justify-start text-lg mb-2 font-semibold"
+              className="flex justify-start text-sm lg:text-lg mb-2 font-semibold"
             >
               Message
             </label>
@@ -192,7 +210,7 @@ const ContactUs = () => {
               id="message"
               name="message"
               rows="5"
-              className={`w-full px-4 py-3 text-lg rounded-md border ${
+              className={`w-full px-4 py-3 text-sm lg:text-lg rounded-md border ${
                 messageValid
                   ? "border-gray-300 focus:border-green-500"
                   : "border-red-500"
@@ -205,7 +223,7 @@ const ContactUs = () => {
               }}
             ></textarea>
             {!messageValid && (
-              <p className="text-red-500">Please enter your message.</p>
+              <p className="text-sm lg:text-md text-red-500">Please enter your message.</p>
             )}
           </motion.div>
           <motion.div

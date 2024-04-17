@@ -117,7 +117,7 @@ export default function AnimatedSlider() {
           />
           <div className="absolute top-0 left-0 w-full h-[100vh] bg-gray-800 bg-opacity-10 opacity-100  flex flex-col justify-center items-center align-top">
             <motion.h1
-              className="text-white font-bold text-center text-[25px] sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl z-10 w-[40%] transform capitalize leading-tight"
+              className="text-white font-bold text-center text-[23px] sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl z-10 w-[40%] transform capitalize leading-tight"
               variants={textVariants}
             >
               Redefining Hospitality <br /> Through Exceptional Experience.
