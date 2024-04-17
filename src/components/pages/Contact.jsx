@@ -120,13 +120,15 @@ const ContactUs = () => {
       </div>
       {alert && (
         <div
-          className={`fixed top-0 right-0 mt-4 mr-4 z-50 bg-${alert.type === "success" ? "green" : "red"}-500 text-white px-4 py-2 rounded-md`}
+          className={`fixed top-0 right-0 mt-4 mr-4 z-50 bg-${
+            alert.type === "success" ? "green" : "red"
+          }-500 text-white px-4 py-2 rounded-md`}
         >
           {alert.message}
         </div>
       )}
 
-      <div className="mt-8 m-4">
+      <div className="mt-[50px] m-4">
         <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -157,7 +159,9 @@ const ContactUs = () => {
               }}
             />
             {!nameValid && (
-              <p className="text-sm lg:text-md text-red-500">Please enter your name.</p>
+              <p className="flex justify-start text-xs lg:text-[14px] text-red-500">
+                Please enter your name.
+              </p>
             )}
           </motion.div>
           <motion.div
@@ -189,7 +193,7 @@ const ContactUs = () => {
               }}
             />
             {!emailValid && (
-              <p className="text-sm lg:text-md text-red-500">
+              <p className="flex justify-start text-xs lg:text-[14px] text-red-500">
                 Please enter a valid email address.
               </p>
             )}
@@ -223,7 +227,9 @@ const ContactUs = () => {
               }}
             ></textarea>
             {!messageValid && (
-              <p className="text-sm lg:text-md text-red-500">Please enter your message.</p>
+              <p className="flex justify-start text-xs lg:text-[14px] text-red-500">
+                Please enter your message.
+              </p>
             )}
           </motion.div>
           <motion.div
