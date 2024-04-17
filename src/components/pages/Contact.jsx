@@ -77,9 +77,9 @@ const ContactUs = () => {
     }
 
     if (isValid) {
-      const userId = "XZh6HMvEHP21JB9zi";
-      const serviceId = "service_6k28pmm";
-      const templateId = "template_zb6m25n";
+      const userId = "DLlQo_tfb-flOj4z1";
+      const serviceId = "service_0h3w5nq";
+      const templateId = "template_f3r350s";
 
       emailjs
         .send(
@@ -116,7 +116,7 @@ const ContactUs = () => {
     <div className="container mx-auto text-center mt-[100px] mb-[70px]">
       <div className="flex flex-col items-center justify-center">
         <h1 className="font-bold text-2xl md:text-3xl">Contact New Fountain</h1>
-        <div className="mt-2 w-10 h-1 rounded-lg bg-green-400"></div>
+        <div className="mt-4 w-10 h-1 rounded-lg bg-green-400"></div>
       </div>
       {alert && (
         <div
