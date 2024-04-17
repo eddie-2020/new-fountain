@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 
-import AnimatedSlider from "./Sliders";
+import AnimatedSlider from "../Sliders";
 import { Link } from "react-router-dom";
 
-import { new_fountain_db } from "../data";
-import SkeletonLoader from "./Skeleton";
+import { new_fountain_db } from "../../data";
+import MinSkeletonLoader from "../skeleton/MinSkeleton";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FiChevronRight } from "react-icons/fi";
 
-import { faWhatsapp, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
-import { new_fountain_services } from "../data";
+import { new_fountain_services } from "../../data";
+import "../styles/HomeStyle.css";
 
 const Home = ({ isDarkMode, toggleTheme }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -52,10 +53,10 @@ const Home = ({ isDarkMode, toggleTheme }) => {
             </div>
 
             {isLoading ? (
-              <SkeletonLoader />
+              <MinSkeletonLoader />
             ) : (
-              <div className="grid gap-4 mt-3 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-                {new_fountain_db.map((data, index) => (
+              <div className="grid gap-4 mt-[50px] sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+                {new_fountain_db.slice(0, 6).map((data, index) => (
                   <div
                     key={index}
                     className={`relative rounded-tr-md bg-white shadow-md hover:shadow-lg p-4 m-2 ${
@@ -95,7 +96,15 @@ const Home = ({ isDarkMode, toggleTheme }) => {
             )}
           </div>
         </div>
-        <hr />
+        <div className="flex justify-center mt-6">
+          <Link to="/luxury-rooms">
+            <button className="button button-lg bg-transparent border-2 border-green-500 font-bold p-3 m-2 rounded-md cursor-pointer text-green-800 relative overflow-hidden transition-colors duration-500 hover:bg-green-500 hover:text-white flex items-center animate-flash">
+              <span className="mr-2 text-sm">All Luxury Rooms</span>
+              <FiChevronRight />
+            </button>
+          </Link>
+        </div>
+        <hr className="mt-6" />
         <div className="mt-[50px]">
           <div className="flex flex-col items-center justify-center">
             <h1 className="font-bold text-[25px] lg:text-[30px]">
@@ -103,7 +112,7 @@ const Home = ({ isDarkMode, toggleTheme }) => {
             </h1>
             <div className="mt-4 w-10 h-1 rounded-lg bg-green-400"></div>
           </div>{" "}
-          <div className="flex justify-center mt-[30px] m-5">
+          <div className="flex justify-center mt-10 m-5">
             <div className="container">
               {new_fountain_services.map((data, index) => (
                 <div
@@ -125,7 +134,7 @@ const Home = ({ isDarkMode, toggleTheme }) => {
                             icon={feature.icon}
                             size="2x"
                             color="green"
-                            className="text-green-600 font-bolder rounded-full"
+                            className="text-green-600 font-bolder"
                           />
                         )}
                       </div>
@@ -141,13 +150,11 @@ const Home = ({ isDarkMode, toggleTheme }) => {
                   ))}
                 </div>
               ))}
-              <div className="flex justify-center mt-6">
+              <div className="flex justify-center mt-8">
                 <Link to="/services">
-                  <button className="button button-lg bg-transparent border-2 border-green-500 font-bold p-3 m-2 rounded-md cursor-pointer text-green-800 relative overflow-hidden transition-colors duration-500 hover:bg-green-500 hover:text-white flex items-center">
+                  <button className="button button-lg bg-transparent border-2 border-green-500 font-bold p-3 m-2 rounded-md cursor-pointer text-green-800 relative overflow-hidden transition-colors duration-500 hover:bg-green-500 hover:text-white flex items-center animate-flash">
                     <span className="mr-2 text-sm">Our Services</span>
                     <FiChevronRight />
-                    <div className="absolute inset-0 bg-green-500 opacity-0 transition-opacity hover:opacity-10"></div>
-                    <div className="absolute inset-0 bg-green-500 opacity-0 hover:opacity-100 hover:bg-opacity-50 animate-flash"></div>
                   </button>
                 </Link>
               </div>
@@ -167,7 +174,7 @@ const Home = ({ isDarkMode, toggleTheme }) => {
               />
             </a>
           </div>
-          <hr />
+          <hr className="mt-2" />
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { new_fountain_services } from "../data";
+import { new_fountain_services } from "../../data";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, useAnimation } from "framer-motion";
@@ -20,7 +20,7 @@ const Services = ({ isDarkMode, toggleTheme }) => {
   useEffect(() => {
     const delay = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(delay);
   }, []);
@@ -32,7 +32,7 @@ const Services = ({ isDarkMode, toggleTheme }) => {
           <h1 className="font-bold text-[20px] md:text-[30px]">Our Services</h1>
           <div className="mt-2 w-10 h-1 rounded-lg bg-green-400"></div>
         </div>
-        <div className="mt-6">
+        <div className="mt-[50px] m-2">
           {new_fountain_services.map((data, idx) => (
             <div key={idx}>
               <p className="text-sm lg:text-lg">{data.services}</p>

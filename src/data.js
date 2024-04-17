@@ -359,7 +359,7 @@ export const new_fountain_db = [
 export const new_fountain_services = [
   {
     services:
-      "Discover unparalleled relaxation at unbeatable rates! Indulge in a haven of serenity and luxury at our upscale apartments, offering the perfect retreat to rejuvenate and revitalize in the bustling center of Lagos.",
+      "Experience affordable relaxation in Lagos. Unwind in our serene apartments at great rates. Discover luxury and tranquility in the heart of the city. Rejuvenate with our upscale accommodations. Your perfect retreat awaits at New Fountain.",
     features: [
       {
         icon: faBolt,
