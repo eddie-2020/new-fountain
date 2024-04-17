@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+
 import { MdSend } from "react-icons/md";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
+
+import WhatsApp from "./WhatsApp";
+
 import "../styles/HomeStyle.css";
 
 const ContactUs = () => {
@@ -15,18 +19,18 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     // Check network connection
     if (!window.navigator.onLine) {
       setAlert({ type: "error", message: "Network connection is offline." });
       setTimeout(() => {
         setAlert(null);
-      }, 5000); // Hide alert after 5 seconds
-      return; // Stop further execution
+      }, 5000);
+      return;
     }
-  
+
     let isValid = true;
-  
+
     // Validate name, email, and message
     if (name.trim() === "") {
       setNameValid(false);
@@ -34,7 +38,7 @@ const ContactUs = () => {
     } else {
       setNameValid(true);
     }
-  
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setEmailValid(false);
@@ -42,19 +46,19 @@ const ContactUs = () => {
     } else {
       setEmailValid(true);
     }
-  
+
     if (message.trim() === "") {
       setMessageValid(false);
       isValid = false;
     } else {
       setMessageValid(true);
     }
-  
+
     if (isValid) {
-      const userId = "XZh6HMvEHP21JB9zi"; // Replace with your actual user ID
+      const userId = "XZh6HMvEHP21JB9zi";
       const serviceId = "service_6k28pmm";
       const templateId = "template_zb6m25n";
-  
+
       emailjs
         .send(
           serviceId,
@@ -74,7 +78,7 @@ const ContactUs = () => {
           setAlert({ type: "success", message: "Message sent successfully!" });
           setTimeout(() => {
             setAlert(null);
-          }, 5000); // Hide alert after 5 seconds
+          }, 5000);
         })
         .catch((error) => {
           console.error("Error sending email:", error);
@@ -84,7 +88,7 @@ const ContactUs = () => {
           });
           setTimeout(() => {
             setAlert(null);
-          }, 5000); // Hide alert after 5 seconds
+          }, 5000);
         });
     }
   };
@@ -103,7 +107,6 @@ const ContactUs = () => {
           {alert.message}
         </div>
       )}
-      
 
       <div className="mt-8 m-4">
         <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
@@ -215,6 +218,7 @@ const ContactUs = () => {
               <span className="mr-2 text-lg">Submit</span>
               <MdSend />
             </button>
+            <WhatsApp />
           </motion.div>
         </form>
       </div>

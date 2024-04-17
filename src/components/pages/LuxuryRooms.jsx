@@ -6,7 +6,6 @@ import { new_fountain_db } from "../../data";
 
 import { FiChevronLeft } from "react-icons/fi";
 
-
 const LuxuryRooms = ({ isDarkMode }) => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -25,11 +24,11 @@ const LuxuryRooms = ({ isDarkMode }) => {
           <div>
             <Link
               to="/"
-              className={`fixed top-0 mt-[100px] z-10 left-10 flex items-center p-2 rounded-full hover:text-gray-800 dark:hover:text-gray-400 transition-colors duration-300 ${
+              className={`fixed top-0 mt-[100px] z-10 left-4 lg:left-10 flex items-center p-2 rounded-full hover:text-gray-800 dark:hover:text-gray-400 transition-colors duration-300 ${
                 isDarkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
               }`}
             >
-              <FiChevronLeft className="h-6 w-6 mr-2" /> Back
+              <FiChevronLeft className="h-6 w-6 mr-0 lg:mr-2" /> Back
             </Link>
           </div>
           <h1 className="font-bold text-[20px] md:text-[30px]">Luxury Rooms</h1>
