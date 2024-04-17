@@ -93,7 +93,6 @@ const ContactUs = () => {
           userId
         )
         .then((response) => {
-          // console.log("Email sent successfully:", response);
           setName("");
           setEmail("");
           setMessage("");
@@ -103,7 +102,6 @@ const ContactUs = () => {
           }, 5000);
         })
         .catch((error) => {
-          // console.error("Error sending email:", error);
           setAlert({ type: "error", message: "Error sending email." });
           setTimeout(() => {
             setAlert(null);
