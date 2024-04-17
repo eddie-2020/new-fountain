@@ -9,13 +9,10 @@ const Footer = ({ isDarkMode, toggleTheme }) => {
       } fixed bottom-0 w-full flex justify-center items-center`}
     >
       <div className="flex items-center space-x-4">
-        <a href="#" className={` ${isDarkMode ? "text-white hover:text-gray-400" : "text-gray-600 hover:text-gray-800"}`}>
+        <a href="https://www.facebook.com/profile.php?id=61550957650668" target="_blank" className={` ${isDarkMode ? "text-white hover:text-gray-400" : "text-gray-600 hover:text-gray-800"}`}>
           <FaFacebook />
         </a>
-        <a href="#" className={` ${isDarkMode ? "text-white hover:text-gray-400" : "text-gray-600 hover:text-gray-800"}`}>
-          <FaTwitter />
-        </a>
-        <a href="#" className={` ${isDarkMode ? "text-white hover:text-gray-400" : "text-gray-600 hover:text-gray-800"}`}>
+        <a href="https://www.instagram.com/Newfountains_apartment/" target="_blank" className={` ${isDarkMode ? "text-white hover:text-gray-400" : "text-gray-600 hover:text-gray-800"}`}>
           <FaInstagram />
         </a>
       </div>
