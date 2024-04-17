@@ -12,6 +12,7 @@ import { useInView } from "react-intersection-observer";
 import { FiChevronRight } from "react-icons/fi";
 
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import WhatsApp from "./WhatsApp";
 
 import { new_fountain_services } from "../../data";
 import "../styles/HomeStyle.css";
@@ -160,20 +161,7 @@ const Home = ({ isDarkMode, toggleTheme }) => {
               </div>
             </div>
           </div>
-          <div className="relative mb-[100px]">
-            <a
-              href="https://api.whatsapp.com/send?phone=1234567890"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="fixed bottom-12 right-10 text-green-500 hover:text-green-600"
-            >
-              <FontAwesomeIcon
-                icon={faWhatsapp}
-                size="2x"
-                className="text-green-500 hover:text-green-600"
-              />
-            </a>
-          </div>
+          <WhatsApp />
           <hr className="mt-2" />
         </div>
       </div>

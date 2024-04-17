@@ -55,7 +55,7 @@ const Services = ({ isDarkMode, toggleTheme }) => {
                     animate={animation}
                     transition={{ duration: 0.5 }}
                   >
-                    <div className="bg-white rounded-full p-3">
+                    <div className="bg-white p-3">
                       {feature.icon && (
                         <FontAwesomeIcon
                           icon={feature.icon}
