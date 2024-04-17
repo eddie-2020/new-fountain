@@ -4,10 +4,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-import Home from "./components/Home";
-import Services from "./components/Services";
-import ContactUs from "./components/Contact";
-import Details from "./components/Details";
+import Home from "./components/pages/Home";
+import Services from "./components/pages/Services";
+import ContactUs from "./components/pages/Contact";
+import Details from "./components/pages/Details";
+import LuxuryRooms from "./components/pages/LuxuryRooms";
 
 import { new_fountain_db } from "./data";
 
@@ -36,7 +37,19 @@ const AppRoutes = () => {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route
           path="/room/details/:id"
-          element={<Details data={new_fountain_db} />}
+          element={
+            <Details
+              isDarkMode={isDarkMode}
+              toggleTheme={toggleTheme}
+              data={new_fountain_db}
+            />
+          }
+        />
+        <Route
+          path="/luxury-rooms"
+          element={
+            <LuxuryRooms isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+          }
         />
       </Routes>
       <Footer isDarkMode={isDarkMode} toggleTheme={toggleTheme} />

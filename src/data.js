@@ -1,15 +1,43 @@
-import Room101 from './images/rooms/IMG_2376.jpg'
-import Room102 from './images/rooms/IMG_2377.jpg'
-import Room103 from './images/rooms/IMG_2378.jpg'
-import Room104 from './images/rooms/IMG_2379.jpg'
-import Room105 from './images/rooms/IMG_2380.jpg'
-import Room106 from './images/rooms/IMG_2381.jpg'
-import Room107 from './images/rooms/IMG_2382.jpg'
+import Room101 from "./images/rooms/IMG_2376.jpg";
+import Room102 from "./images/rooms/IMG_2377.jpg";
+import Room103 from "./images/rooms/IMG_2378.jpg";
+import Room104 from "./images/rooms/IMG_2379.jpg";
+import Room105 from "./images/rooms/IMG_2380.jpg";
+import Room106 from "./images/rooms/IMG_2381.jpg";
+import Room107 from "./images/rooms/IMG_2382.jpg";
+
+import {
+  faBolt,
+  faWifi,
+  faTv,
+  faSatelliteDish,
+  faUtensils,
+  faBowlFood,
+  faShower,
+  faLock,
+  faCar,
+} from "@fortawesome/free-solid-svg-icons";
+
+// import { SiNetflix } from "react-icons/si";
 
 export const new_fountain_db = [
   {
     id: 1,
     image: Room101,
+    other_images: [
+      Room102,
+      Room103,
+      Room104,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+    ],
     name: "Room 101",
     room_details: "1 room, 2 toilets",
     booking_rate: "One Bedroom Apartment ₦45,000 Per Night",
@@ -18,6 +46,20 @@ export const new_fountain_db = [
   {
     id: 2,
     image: Room102,
+    other_images: [
+      Room102,
+      Room103,
+      Room104,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+    ],
     name: "Room 102",
     room_details: "1 room, 1 toilet",
     booking_rate: "One Bedroom Apartment ₦45,000 Per Night",
@@ -26,6 +68,20 @@ export const new_fountain_db = [
   {
     id: 3,
     image: Room103,
+    other_images: [
+      Room102,
+      Room103,
+      Room104,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+    ],
     name: "Room 103",
     room_details: "2 rooms, 3 toilets",
     booking_rate: "Two Bedroom Apartment ₦55,000 Per Night",
@@ -34,6 +90,20 @@ export const new_fountain_db = [
   {
     id: 4,
     image: Room104,
+    other_images: [
+      Room102,
+      Room103,
+      Room104,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+    ],
     name: "Room 104",
     room_details: "1 room, 2 toilets",
     booking_rate: "One Bedroom Apartment ₦45,000 Per Night",
@@ -42,6 +112,21 @@ export const new_fountain_db = [
   {
     id: 5,
     image: Room105,
+    other_images: [
+      Room102,
+      Room103,
+      Room104,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+    ],
+
     name: "Room 105",
     room_details: "2 rooms, 3 toilets",
     booking_rate: "Two Bedroom Apartment ₦55,000 Per Night",
@@ -50,6 +135,20 @@ export const new_fountain_db = [
   {
     id: 6,
     image: Room106,
+    other_images: [
+      Room102,
+      Room103,
+      Room104,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+    ],
     name: "Room 106",
     room_details: "2 rooms, 2 toilets",
     booking_rate: "Two Bedroom Apartment ₦55,000 Per Night",
@@ -58,6 +157,20 @@ export const new_fountain_db = [
   {
     id: 7,
     image: Room104,
+    other_images: [
+      Room102,
+      Room103,
+      Room104,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+    ],
     name: "Room 201",
     room_details: "1 room, 1 toilet",
     booking_rate: "One Bedroom Apartment ₦45,000 Per Night",
@@ -66,6 +179,21 @@ export const new_fountain_db = [
   {
     id: 8,
     image: Room105,
+    other_images: [
+      Room102,
+      Room103,
+      Room104,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+    ],
+
     name: "Room 202",
     room_details: "2 rooms, 2 toilets",
     booking_rate: "Two Bedroom Apartment ₦55,000 Per Night",
@@ -74,6 +202,20 @@ export const new_fountain_db = [
   {
     id: 9,
     image: Room102,
+    other_images: [
+      Room102,
+      Room103,
+      Room104,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+    ],
     name: "Room 203",
     room_details: "2 rooms, 3 toilets",
     booking_rate: "Two Bedroom Apartment ₦45,000 Per Night",
@@ -82,6 +224,20 @@ export const new_fountain_db = [
   {
     id: 10,
     image: Room103,
+    other_images: [
+      Room102,
+      Room103,
+      Room104,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+    ],
     name: "Room 204",
     room_details: "1 room, 2 toilets",
     booking_rate: "One Bedroom Apartment ₦45,000 Per Night",
@@ -90,6 +246,20 @@ export const new_fountain_db = [
   {
     id: 11,
     image: Room107,
+    other_images: [
+      Room102,
+      Room103,
+      Room104,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+    ],
     name: "Painthouse",
     room_details: "3 rooms, 3 toilets",
     booking_rate: "Three Bedroom Apartment ₦80,000 Per Night",
@@ -98,6 +268,21 @@ export const new_fountain_db = [
   {
     id: 12,
     image: Room103,
+    other_images: [
+      Room102,
+      Room103,
+      Room104,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+    ],
+
     name: "Room 301",
     room_details: "2 rooms, 3 toilets",
     booking_rate: "Two Bedroom Apartment ₦55,000 Per Night",
@@ -106,6 +291,20 @@ export const new_fountain_db = [
   {
     id: 13,
     image: Room106,
+    other_images: [
+      Room102,
+      Room103,
+      Room104,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+    ],
     name: "Room 302",
     room_details: "1 room, 2 toilets",
     booking_rate: "One Bedroom Apartment ₦45,000 Per Night",
@@ -114,6 +313,20 @@ export const new_fountain_db = [
   {
     id: 14,
     image: Room101,
+    other_images: [
+      Room102,
+      Room103,
+      Room104,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+    ],
     name: "Room 303",
     room_details: "2 rooms, 3 toilets",
     booking_rate: "Two Bedroom Apartment ₦55,000 Per Night",
@@ -122,6 +335,20 @@ export const new_fountain_db = [
   {
     id: 15,
     image: Room104,
+    other_images: [
+      Room102,
+      Room103,
+      Room104,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+      Room105,
+      Room101,
+      Room107,
+    ],
     name: "Room 304",
     room_details: "1 room, 2 toilets",
     booking_rate: "One Bedroom Apartment ₦45,000 Per Night",
@@ -132,17 +359,82 @@ export const new_fountain_db = [
 export const new_fountain_services = [
   {
     services:
-      "Experience the ultimate relaxation experience at the most affordable prices! Immerse yourself in a world of tranquility and comfort at our luxurious apartments, where you can unwind and recharge amidst the vibrant heart of Lagos.",
+      "Experience affordable relaxation in Lagos. Unwind in our serene apartments at great rates. Discover luxury and tranquility in the heart of the city. Rejuvenate with our upscale accommodations. Your perfect retreat awaits at New Fountain.",
     features: [
-      "24/7 Power Supply",
-      "WIFI (For Smart TV)",
-      "Netflix",
-      "Dstv",
-      "Kitchen Utensils",
-      "Microwave",
-      "Water Heater",
-      "100% Security Guarantee",
-      "Spacious Parking Space",
+      {
+        icon: faBolt,
+        title: "24/7 Power Supply",
+        description:
+          "Experience the convenience of uninterrupted power supply, ensuring you're never left in the dark. Whether it's day or night, you can count on reliable electricity to power your devices, appliances, and keep your home functioning smoothly.",
+      },
+      {
+        icon: faWifi,
+        title: "WIFI (For Smart TV)",
+        description:
+          "Stay seamlessly connected to the digital world with high-speed WiFi tailored specifically for your Smart TV needs. Stream your favorite shows, movies, and videos without any buffering or lag, and enjoy a truly immersive entertainment experience right from the comfort of your living room.",
+      },
+      {
+        icon: faCar,
+        title: "Spacious Parking Space",
+        description:
+          "Bid farewell to parking woes with ample parking space available onsite. Whether you have one vehicle or multiple cars, there's more than enough room to accommodate your parking needs, ensuring hassle-free access and convenience for residents and guests alike.",
+      },
+    ],
+    service_features: [
+      {
+        icon: faBolt,
+        title: "24/7 Power Supply",
+        description:
+          "Experience the convenience of uninterrupted power supply, ensuring you're never left in the dark. Whether it's day or night, you can count on reliable electricity to power your devices, appliances, and keep your home functioning smoothly.",
+      },
+      {
+        icon: faWifi,
+        title: "WIFI (For Smart TV)",
+        description:
+          "Stay seamlessly connected to the digital world with high-speed WiFi tailored specifically for your Smart TV needs. Stream your favorite shows, movies, and videos without any buffering or lag, and enjoy a truly immersive entertainment experience right from the comfort of your living room.",
+      },
+      {
+        icon: faTv,
+        title: "Netflix",
+        description:
+          "Immerse yourself in a world of endless entertainment with complimentary access to Netflix. From binge-worthy TV series to blockbuster movies and captivating documentaries, there's something for everyone to enjoy, right at your fingertips.",
+      },
+      {
+        icon: faSatelliteDish,
+        title: "Dstv",
+        description:
+          "Elevate your television viewing experience with DStv, offering a diverse selection of channels catering to every interest and preference. Whether you're a sports enthusiast, movie buff, news junkie, or simply seeking quality family entertainment, DStv has you covered with its extensive range of programming.",
+      },
+      {
+        icon: faUtensils,
+        title: "Kitchen Utensils",
+        description:
+          "Discover the joy of cooking in a fully equipped kitchen furnished with all the essential utensils you need. From pots and pans to cooking utensils and cutlery, everything is conveniently at your disposal, making meal preparation a breeze.",
+      },
+      {
+        icon: faBowlFood,
+        title: "Microwave",
+        description:
+          "Save time and effort in the kitchen with the convenience of a microwave oven. Whether you're heating up leftovers, defrosting ingredients, or preparing quick snacks, the microwave offers fast and efficient cooking solutions to suit your busy lifestyle.",
+      },
+      {
+        icon: faShower,
+        title: "Water Heater",
+        description:
+          "Indulge in luxurious hot showers whenever you desire, thanks to the efficient water heater installed in your bathroom. Experience instant warmth and comfort as you wash away the stresses of the day, leaving you feeling refreshed and rejuvenated.",
+      },
+      {
+        icon: faLock,
+        title: "100% Security Guarantee",
+        description:
+          "Enjoy peace of mind knowing that your safety and security are our top priorities. With round-the-clock security measures in place, including surveillance cameras, security personnel, and secure access points, you can rest assured that you and your loved ones are always protected within the confines of your home.",
+      },
+      {
+        icon: faCar,
+        title: "Spacious Parking Space",
+        description:
+          "Bid farewell to parking woes with ample parking space available onsite. Whether you have one vehicle or multiple cars, there's more than enough room to accommodate your parking needs, ensuring hassle-free access and convenience for residents and guests alike.",
+      },
     ],
   },
 ];
