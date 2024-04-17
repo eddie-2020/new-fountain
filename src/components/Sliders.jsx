@@ -10,6 +10,8 @@ import Slide2 from "../images/slide2.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import "./styles/HomeStyle.css";
+
 export default function AnimatedSlider() {
   const variants = {
     enter: {
@@ -26,7 +28,7 @@ export default function AnimatedSlider() {
 
   const textVariants = {
     enter: { opacity: 0, y: 20 },
-    center: { opacity: 1, y: 0 },
+    center: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.5 } },
     exit: { opacity: 0, y: -20 },
   };
 
@@ -111,9 +113,9 @@ export default function AnimatedSlider() {
           <img
             src={Slide1}
             alt=""
-            className="object-fit max-w-full max-h-[100vh] w-full h-full z-0"
+            className="object-fit max-w-full w-full h-[100vh] z-0"
           />
-          <div className="absolute top-0 left-0 w-full h-full bg-gray-800 bg-opacity-10 opacity-100  flex flex-col justify-center items-center align-top">
+          <div className="absolute top-0 left-0 w-full h-[100vh] bg-gray-800 bg-opacity-10 opacity-100  flex flex-col justify-center items-center align-top">
             <motion.h1
               className="text-white font-bold text-center text-[20px] sm:text-1xl md:text-2xl lg:text-3xl xl:text-4xl z-10 w-[40%] transform capitalize leading-tight"
               variants={textVariants}
@@ -130,11 +132,9 @@ export default function AnimatedSlider() {
               <div className="flex justify-center items-center">
                 <div className="mt-4">
                   <Link to="/services">
-                    <button className="button button-lg bg-transparent border-2 border-white font-bold p-3 m-2 rounded-md cursor-pointer text-white relative overflow-hidden transition-colors duration-500 hover:bg-white hover:text-gray-800 flex items-center">
+                    <button className="button button-lg bg-transparent border-2 border-green-500 font-bold p-3 m-2 rounded-md cursor-pointer text-green-500 relative overflow-hidden transition-colors duration-500 hover:bg-green-500 hover:text-white flex items-center animate-flash">
                       <span className="mr-2 text-sm">Our Services</span>
                       <FiChevronRight />
-                      <div className="absolute inset-0 bg-white opacity-0 transition-opacity hover:opacity-10"></div>
-                      <div className="absolute inset-0 bg-white opacity-0 hover:opacity-100 hover:bg-opacity-50 animate-flash"></div>
                     </button>
                   </Link>
                 </div>
@@ -151,9 +151,9 @@ export default function AnimatedSlider() {
           <img
             src={Slide2}
             alt=""
-            className="object-fit max-w-full max-h-[100vh] w-full h-full z-0"
+            className="object-fit max-w-full max-h-[100vh] w-full h-[100vh] z-0"
           />
-          <div className="absolute top-0 left-0 w-full h-full bg-gray-800 bg-opacity-10 opacity-100 transform uppercase flex flex-col justify-center items-center"></div>
+          <div className="absolute top-0 left-0 w-full h-[100vh] bg-gray-800 bg-opacity-10 opacity-100 transform uppercase flex flex-col justify-center items-center"></div>
         </motion.div>
       </Slider>
     </div>
