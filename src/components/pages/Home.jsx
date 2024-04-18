@@ -57,7 +57,7 @@ const Home = ({ isDarkMode, toggleTheme }) => {
               <MinSkeletonLoader />
             ) : (
               <div className="grid gap-4 mt-[50px] sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-                {new_fountain_db.slice(0, 6).map((data, index) => (
+                {new_fountain_db.slice(0, 3).map((data, index) => (
                   <div
                     key={index}
                     className={`relative rounded-tr-md bg-white shadow-md hover:shadow-lg p-4 m-2 ${
